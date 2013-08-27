@@ -10,6 +10,11 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe StaticPagesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+def full_title(page_title)
+  base_title = "Ruby on Rails Tutorial Sample App"
+  if page_title.empty?
+    base_title
+  else
+    "#{base_title} | #{page_title}"
+  end
 end
